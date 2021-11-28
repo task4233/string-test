@@ -1,5 +1,3 @@
-module example.com/v1
+module github.com/task4233/string-test
 
 go 1.17
-
-require github.com/pkg/errors v0.9.1

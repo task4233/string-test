@@ -1,0 +1,207 @@
+$ ARG_LEN=1 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16               164034127                7.385 ns/op           0 B/op          0 allocs/op
+Benchmark/WithJoin-16                   393174982                2.998 ns/op           0 B/op          0 allocs/op
+Benchmark/WithBytes-16                  29016315                36.46 ns/op            8 B/op          1 allocs/op
+Benchmark/WithBytesSetCap-16            60320173                20.43 ns/op            1 B/op          1 allocs/op
+PASS
+ok      github.com/task4233/string-test 6.671s
+
+$ ARG_LEN=2 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16               29271536                40.93 ns/op            3 B/op          1 allocs/op
+Benchmark/WithJoin-16                   34830896                31.26 ns/op            3 B/op          1 allocs/op
+Benchmark/WithBytes-16                  19236733                62.39 ns/op           16 B/op          2 allocs/op
+Benchmark/WithBytesSetCap-16            24795996                43.34 ns/op            6 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 4.760s
+
+$ ARG_LEN=3 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16               14199480                82.90 ns/op           10 B/op          2 allocs/op
+Benchmark/WithJoin-16                   29840908                45.71 ns/op            8 B/op          1 allocs/op
+Benchmark/WithBytes-16                  23149980                66.48 ns/op           16 B/op          2 allocs/op
+Benchmark/WithBytesSetCap-16            18599288                60.74 ns/op           16 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 5.464s
+
+$ ARG_LEN=4 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                8732407               130.5 ns/op            24 B/op          3 allocs/op
+Benchmark/WithJoin-16                   16782958                67.38 ns/op           16 B/op          1 allocs/op
+Benchmark/WithBytes-16                   9671862               126.2 ns/op            40 B/op          3 allocs/op
+Benchmark/WithBytesSetCap-16            13167730                87.72 ns/op           32 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 5.086s
+
+$ ARG_LEN=8 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                2732827               419.0 ns/op           144 B/op          7 allocs/op
+Benchmark/WithJoin-16                    8250961               131.3 ns/op            48 B/op          1 allocs/op
+Benchmark/WithBytes-16                   3989368               292.8 ns/op           168 B/op          5 allocs/op
+Benchmark/WithBytesSetCap-16             8469997               140.4 ns/op            96 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 5.635s
+
+$ ARG_LEN=16 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                1000000              1169 ns/op             896 B/op         15 allocs/op
+Benchmark/WithJoin-16                    4833135               251.9 ns/op           144 B/op          1 allocs/op
+Benchmark/WithBytes-16                   2141382               570.4 ns/op           648 B/op          7 allocs/op
+Benchmark/WithBytesSetCap-16             4999500               240.8 ns/op           288 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 5.894s
+
+$ ARG_LEN=32 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                 342278              3251 ns/op            6272 B/op         31 allocs/op
+Benchmark/WithJoin-16                    2130445               560.5 ns/op           576 B/op          1 allocs/op
+Benchmark/WithBytes-16                    968637              1131 ns/op            2616 B/op          9 allocs/op
+Benchmark/WithBytesSetCap-16             2493796               486.0 ns/op          1152 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 5.729s
+
+$ ARG_LEN=64 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                  89407             12977 ns/op           48704 B/op         63 allocs/op
+Benchmark/WithJoin-16                     848397              1264 ns/op            2304 B/op          1 allocs/op
+Benchmark/WithBytes-16                    414564              2664 ns/op            9720 B/op         12 allocs/op
+Benchmark/WithBytesSetCap-16              938385              1274 ns/op            4608 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 4.734s
+
+$ ARG_LEN=128 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                  15230             80205 ns/op          381121 B/op        127 allocs/op
+Benchmark/WithJoin-16                     404185              2948 ns/op            9472 B/op          1 allocs/op
+Benchmark/WithBytes-16                    139000              8752 ns/op           45688 B/op         17 allocs/op
+Benchmark/WithBytesSetCap-16              353498              3336 ns/op           18944 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 5.769s
+
+$ ARG_LEN=256 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                   2234            502812 ns/op         2988236 B/op        255 allocs/op
+Benchmark/WithJoin-16                     137946              8966 ns/op           40960 B/op          1 allocs/op
+Benchmark/WithBytes-16                     37016             32223 ns/op          194552 B/op         22 allocs/op
+Benchmark/WithBytesSetCap-16              101420             11744 ns/op           81920 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 5.342s
+
+$ ARG_LEN=512 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                    417           2802515 ns/op        23705843 B/op        511 allocs/op
+Benchmark/WithJoin-16                      52036             23512 ns/op          139264 B/op          1 allocs/op
+Benchmark/WithBytes-16                     10000            108048 ns/op          800762 B/op         27 allocs/op
+Benchmark/WithBytesSetCap-16               35260             34508 ns/op          278528 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 5.576s
+
+$ ARG_LEN=1024 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                     46          22831671 ns/op        182787031 B/op      1030 allocs/op
+Benchmark/WithJoin-16                      16236             74081 ns/op          532481 B/op          1 allocs/op
+Benchmark/WithBytes-16                      2650            454408 ns/op         3446795 B/op         33 allocs/op
+Benchmark/WithBytesSetCap-16                9234            139729 ns/op         1064964 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 5.587s
+
+$ ARG_LEN=2048 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                      8         133450827 ns/op        1441212102 B/op     2075 allocs/op
+Benchmark/WithJoin-16                       3750            304682 ns/op         2105358 B/op          1 allocs/op
+Benchmark/WithBytes-16                       774           1559788 ns/op        13760576 B/op         39 allocs/op
+Benchmark/WithBytesSetCap-16                1839            660258 ns/op         4210714 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 5.039s
+
+$ ARG_LEN=4096 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                      2         855928462 ns/op        11477552052 B/op            4131 allocs/op
+Benchmark/WithJoin-16                        729           1636387 ns/op         8396823 B/op          1 allocs/op
+Benchmark/WithBytes-16                       235           5097195 ns/op        53581903 B/op         45 allocs/op
+Benchmark/WithBytesSetCap-16                 512           2299063 ns/op        16793626 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 7.122s
+
+$ ARG_LEN=8192 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                      1        6408840044 ns/op        91692015792 B/op            8315 allocs/op
+Benchmark/WithJoin-16                        180           6629293 ns/op        33562634 B/op          1 allocs/op
+Benchmark/WithBytes-16                        63          17881729 ns/op        206805017 B/op        51 allocs/op
+Benchmark/WithBytesSetCap-16                 133           9058962 ns/op        67125278 B/op          2 allocs/op
+PASS
+ok      github.com/task4233/string-test 12.549s
+
+$ ARG_LEN=16384 make bench
+go test -bench . -benchmem -count=1
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+Benchmark/WithOperator-16                      1        49965684407 ns/op       733208024944 B/op          16750 allocs/op
+Benchmark/WithJoin-16                         46          24920597 ns/op        134225924 B/op         1 allocs/op
+Benchmark/WithBytes-16                        14          80331363 ns/op        961787940 B/op        58 allocs/op
+Benchmark/WithBytesSetCap-16                  33          33891200 ns/op        268451917 B/op         2 allocs/op
+PASS
+ok      github.com/task4233/string-test 53.617s

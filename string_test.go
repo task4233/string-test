@@ -28,7 +28,7 @@ func init() {
 func Benchmark(b *testing.B) {
 	targets := InitForBench()
 
-	fmt.Fprintf(os.Stderr, "len: %d\n", len(targets))
+	// fmt.Fprintf(os.Stderr, "len: %d\n", len(targets))
 	for _, t := range targets {
 		t := t
 
