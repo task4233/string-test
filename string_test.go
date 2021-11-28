@@ -4,16 +4,21 @@ import (
 	"fmt"
 	"os"
 	"reflect"
+	"strconv"
 	"strings"
 	"testing"
 )
 
 var args []string
 
-const LEN = 100
-
 // O(N^2)
 func init() {
+	LEN, err := strconv.Atoi(os.Getenv("ARG_LEN"))
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "ARG_LEN is not set")
+		os.Exit(1)
+	}
+
 	args = make([]string, 0, LEN)
 	for idx := 0; idx < LEN; idx++ {
 		args = append(args, strings.Repeat("a", idx+1))
