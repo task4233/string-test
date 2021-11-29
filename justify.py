@@ -11,11 +11,11 @@ with open('log.raw', 'r') as f:
     # print(lines)
 
 for idx in range(len(lines)):
-    if idx % 13 < 6 or 10 < idx % 13:
+    if idx % 10 < 5 or 8 < idx % 10:
         continue
 
     ss = lines[idx].split()
-    if idx % 13 < 10:
+    if idx % 10 < 8:
         rb.append(ss[2])
         mb.append(ss[4])
         ab.append(ss[6])

@@ -10,7 +10,6 @@ Benchmark/WithBytes-16                  29016315                36.46 ns/op     
 Benchmark/WithBytesSetCap-16            60320173                20.43 ns/op            1 B/op          1 allocs/op
 PASS
 ok      github.com/task4233/string-test 6.671s
-
 $ ARG_LEN=2 make bench
 go test -bench . -benchmem -count=1
 goos: linux
@@ -23,7 +22,6 @@ Benchmark/WithBytes-16                  19236733                62.39 ns/op     
 Benchmark/WithBytesSetCap-16            24795996                43.34 ns/op            6 B/op          2 allocs/op
 PASS
 ok      github.com/task4233/string-test 4.760s
-
 $ ARG_LEN=3 make bench
 go test -bench . -benchmem -count=1
 goos: linux
@@ -36,7 +34,6 @@ Benchmark/WithBytes-16                  23149980                66.48 ns/op     
 Benchmark/WithBytesSetCap-16            18599288                60.74 ns/op           16 B/op          2 allocs/op
 PASS
 ok      github.com/task4233/string-test 5.464s
-
 $ ARG_LEN=4 make bench
 go test -bench . -benchmem -count=1
 goos: linux
@@ -49,7 +46,6 @@ Benchmark/WithBytes-16                   9671862               126.2 ns/op      
 Benchmark/WithBytesSetCap-16            13167730                87.72 ns/op           32 B/op          2 allocs/op
 PASS
 ok      github.com/task4233/string-test 5.086s
-
 $ ARG_LEN=8 make bench
 go test -bench . -benchmem -count=1
 goos: linux

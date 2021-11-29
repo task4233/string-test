@@ -1,0 +1,70 @@
+$ ARG_N=1 go test -bench . -benchmem
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test/concat-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+BenchmarkConcatWithConstString-16    	177689691	         6.767 ns/op	       0 B/op	       0 allocs/op
+BenchmarkConcatWithVarString-16      	179847038	         6.756 ns/op	       0 B/op	       0 allocs/op
+BenchmarkConcatWithRawString-16      	178451881	         6.703 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/task4233/string-test/concat-test	5.599s
+$ ARG_N=2 go test -bench . -benchmem
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test/concat-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+BenchmarkConcatWithConstString-16    	28910671	        46.48 ns/op	       8 B/op	       1 allocs/op
+BenchmarkConcatWithVarString-16      	25587844	        46.15 ns/op	       8 B/op	       1 allocs/op
+BenchmarkConcatWithRawString-16      	25985134	        45.59 ns/op	       8 B/op	       1 allocs/op
+PASS
+ok  	github.com/task4233/string-test/concat-test	3.853s
+$ ARG_N=4 go test -bench . -benchmem
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test/concat-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+BenchmarkConcatWithConstString-16    	 7773164	       156.4 ns/op	      40 B/op	       3 allocs/op
+BenchmarkConcatWithVarString-16      	 7412115	       159.1 ns/op	      40 B/op	       3 allocs/op
+BenchmarkConcatWithRawString-16      	 7774278	       164.6 ns/op	      40 B/op	       3 allocs/op
+PASS
+ok  	github.com/task4233/string-test/concat-test	4.160s
+$ ARG_N=8 go test -bench . -benchmem
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test/concat-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+BenchmarkConcatWithConstString-16    	 2892753	       432.9 ns/op	     152 B/op	       7 allocs/op
+BenchmarkConcatWithVarString-16      	 2812444	       432.1 ns/op	     152 B/op	       7 allocs/op
+BenchmarkConcatWithRawString-16      	 2738904	       431.0 ns/op	     152 B/op	       7 allocs/op
+PASS
+ok  	github.com/task4233/string-test/concat-test	4.952s
+$ ARG_N=16 go test -bench . -benchmem
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test/concat-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+BenchmarkConcatWithConstString-16    	 1147345	      1024 ns/op	     600 B/op	      15 allocs/op
+BenchmarkConcatWithVarString-16      	 1000000	      1025 ns/op	     600 B/op	      15 allocs/op
+BenchmarkConcatWithRawString-16      	 1000000	      1081 ns/op	     600 B/op	      15 allocs/op
+PASS
+ok  	github.com/task4233/string-test/concat-test	4.289s
+$ ARG_N=32 go test -bench . -benchmem
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test/concat-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+BenchmarkConcatWithConstString-16    	  446425	      2431 ns/op	    2264 B/op	      31 allocs/op
+BenchmarkConcatWithVarString-16      	  610842	      2437 ns/op	    2264 B/op	      31 allocs/op
+BenchmarkConcatWithRawString-16      	  545599	      2412 ns/op	    2264 B/op	      31 allocs/op
+PASS
+ok  	github.com/task4233/string-test/concat-test	3.966s
+$ ARG_N=64 go test -bench . -benchmem
+goos: linux
+goarch: amd64
+pkg: github.com/task4233/string-test/concat-test
+cpu: AMD Ryzen 7 3800X 8-Core Processor             
+BenchmarkConcatWithConstString-16    	  213820	      5424 ns/op	    8664 B/op	      63 allocs/op
+BenchmarkConcatWithVarString-16      	  223375	      5489 ns/op	    8664 B/op	      63 allocs/op
+BenchmarkConcatWithRawString-16      	  208803	      5478 ns/op	    8664 B/op	      63 allocs/op
+PASS
+ok  	github.com/task4233/string-test/concat-test	3.706s
